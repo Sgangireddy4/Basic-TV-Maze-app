@@ -1,0 +1,35 @@
+body {
+    font-size: 16px;
+    color: white;
+    font-family: 'Oxygen', sans-serif;
+  }
+
+#container {
+    background: rgb(158, 128, 68);
+    width: 60%;
+    margin: 10px auto 10px auto;
+    padding: 3px 3px 10px 3px;
+    border-radius: 5px;
+}
+
+div img {
+    height: 500px;
+    padding: 10px auto 2px auto;
+}
+
+#container h1{
+    background: rgb(109, 112, 94);;
+    padding: 1px;
+    border: black 1px solid;
+    border-radius: 5px;
+    margin: 1px;
+    color: white;
+}
+
+#summary{
+    margin: 1px 20px 1px 20px;
+}
+.bold {
+    font-weight: bold;
+}
+

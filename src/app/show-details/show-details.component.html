@@ -1,0 +1,18 @@
+<div id = "container">
+  <h1 style="text-align:center">{{current?.name}}</h1>
+  <div style="text-align:center">
+    <img [src] = 'current.image'>    
+  </div>
+  
+  <div style="text-align:center">    
+    <h3>Rating: {{current?.rating}}</h3>    
+    <span class='bold'>Language: </span><span>{{current?.language}}</span><br>
+    <span class='bold'>Genres: </span><span>{{current?.genre}}</span><br>
+    <span class='bold'>RunTime: </span><span>{{current?.runtime}} minutes</span><br>
+    <span class='bold'>Channel: </span><span>{{current?.channel}}</span>
+    <br><br>   
+  </div>
+  <div id ="summary" width = "80%"><span  class='bold'>Description: </span><br><span>{{current?.summary}}</span></div>
+  
+  
+</div>

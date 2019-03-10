@@ -1,0 +1,54 @@
+#header {
+    background-color: rgb(158, 128, 68);
+    padding: 10px;
+    color: white;
+    /* border: grey 10px solid; */
+    }
+
+#container {    
+    float: left;
+    width: 20%;    
+}
+
+#container .holder{
+    margin: 5px;
+    background:  rgb(138, 130, 115);
+    border-radius: 5px;
+    padding: 10px;
+
+}
+#container .holder h1{
+    background: rgb(158, 128, 68);
+    margin-top: 0px;
+    padding: auto 5px auto 5px;
+    border: black 1px solid;
+    border-radius: 5px;
+    height: 76px;
+}
+
+button{
+    background: rgb(63, 53, 33);
+    color: white;
+    padding: 5px;
+    border: black solid 1px;
+}
+
+button:hover{
+    background: rgb(230, 209, 168);
+    color: black;
+
+}
+.holder img {
+    height: 300px;
+    margin: 2px auto 2px auto;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 2px;
+}

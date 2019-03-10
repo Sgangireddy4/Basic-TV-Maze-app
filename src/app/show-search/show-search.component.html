@@ -1,0 +1,12 @@
+<form style="text-align:center">
+  <mat-form-field>
+     
+      <mat-icon matPrefix>search</mat-icon>
+  
+      <input matInput placeholder = "Enter Show Name" type = "text" [formControl] = "search">
+      <br>
+      <mat-error *ngIf = "search.invalid"> Enter three or more letters </mat-error>
+      
+  </mat-form-field>
+  
+</form>

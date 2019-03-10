@@ -1,0 +1,26 @@
+<!-- TOP HEADING -->
+<div style="text-align:center" id= "header">
+  <h1>
+    Welcome to TV MAZE!
+  </h1>
+</div>
+<h2 style="text-align:center">Search for your favorite TV shows!</h2>
+
+<!-- SEARCH COMPONENT -->
+<app-show-search (searchEvent) = 'doSearch($event)' ></app-show-search>
+
+<!-- SINGLE SEARCH INIT ON CLICK GRID -->
+<app-show-details *ngIf = "show" [current] = "show"></app-show-details>
+
+<!-- GRID OF MULTISEARCH -->
+<div *ngFor = "let show of Shows">    
+    <div id = "container">        
+      <div class = "holder">
+          <h1 style="text-align:center">{{show.name}}</h1>    
+          <div style="text-align:center">                           
+              <img [src] = 'show.image'><br>
+              <button href = "app-show-details" (click) = "doSingleSearch(show.name)" > Full Details </button><br>
+          </div>           
+      </div>      
+    </div>          
+</div>
