@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IShowDetails } from './ishow-details';
 import {map} from 'rxjs/operators';
+import { IShowService } from './ishow-service';
+
 
 
   interface IshowDetailsData {    
@@ -18,7 +20,7 @@ import {map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class ShowService {
+export class ShowService implements IShowService{
   constructor(private httpClient:HttpClient) { }
   getShowDetails(showname:string){
     return this.httpClient.get<any[]>('http://api.tvmaze.com/search/shows?q='+showname).pipe(map(data => this.convertToShowData(data)) )}
