@@ -1,4 +1,4 @@
-<div id = "container">
+<div id = "container" *ngIf="current">
   <h1 style="text-align:center">{{current?.name}}</h1>
   <div style="text-align:center">
     <img [src] = 'current.image'>    

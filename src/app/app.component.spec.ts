@@ -4,21 +4,27 @@ import { AppComponent } from './app.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { ShowDetailsComponent } from './show-details/show-details.component';
+import {ShowSearchComponent} from './show-search/show-search.component';
 
 import { ShowService } from './show.service';
 import {ShowServiceFake} from './show.service.fake';
+
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule, HttpClientTestingModule
+        RouterTestingModule, HttpClientTestingModule, HttpClientModule, ReactiveFormsModule, FormsModule
       ],
       declarations: [
-        AppComponent, ShowDetailsComponent
+        AppComponent, ShowDetailsComponent, ShowSearchComponent
       ],
 
       providers: [{provide: ShowService, useClass: ShowServiceFake}],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
 
@@ -38,6 +44,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to tv-maze-app!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to TV MAZE!');
   });
 });
